@@ -29,11 +29,7 @@ class hotelcontroller extends Controller
      */
     public function create()
     {
-        //
-
-        reservation::create(Request::all());
-
-return 'success';
+        
     }
 
 public function login()
@@ -80,6 +76,31 @@ $model = User::where('email', $check['email'])
     public function store(Request $request)
     {
         //
+
+
+        //
+$salvate = Request::all();
+$salvate['r_no'] = (string)rand(1, 10000);
+
+//return $salvate;
+
+     reservation::create($salvate);
+
+// $modelb = reservation::where('email', $salvate['email']) 
+//       ->get();
+
+
+
+// $product = reservation::find($modelb[count($model)-1]['id']);
+
+
+
+
+// $product->r_no = rand(1, 10000);
+// $product->save();
+
+
+return 'success';
     }
 
     /**

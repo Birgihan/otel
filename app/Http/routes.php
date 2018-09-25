@@ -13,7 +13,7 @@
 
 
 
-Route::post('reservation','hotelcontroller@create');
+Route::post('reservation','hotelcontroller@store');
 
 Route::post('admin','hotelcontroller@login');
 
