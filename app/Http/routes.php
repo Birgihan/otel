@@ -11,8 +11,19 @@
 |
 */
 
+
+
+Route::post('reservation','hotelcontroller@store');
+
+Route::post('admin','hotelcontroller@login');
+
+Route::get('/admin', function () {
+    return view('login');
+});
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::get('/home', function () {
     return view('home');
